@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class MainApp2 {
     public static void main(String[] args) {
-        String fisierIntrare = "in.txt";//no
+        String fisierIntrare = "in.txt";//no no
         String fisierIesire = "out.txt";
         String secventaFinala = "dui";  // Alege secvența de litere
         Random random = new Random();
