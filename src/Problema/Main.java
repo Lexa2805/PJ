@@ -10,15 +10,15 @@ public class Main {
     public static void main(String[] args) {
         List<Echipament> echipamente = new ArrayList<>();
 
-        // Citirea din fișierul electronice.txt
+
         try (Scanner scanner = new Scanner(new File("C:/Users/Lexa/IdeaProjects/Lab4/Problema/electronice.txt"))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
-                if (line.isEmpty()) continue;  // Sărim liniile goale
+                if (line.isEmpty()) continue;
 
                 String[] campuri = line.split(";");
 
-                // Verificăm dacă linia are numărul minim de câmpuri
+
                 if (campuri.length < 6) {
                     System.out.println("Linie invalidă: " + line);
                     continue;
@@ -168,7 +168,7 @@ public class Main {
         System.out.print("Introduceți numărul de inventar al copiatorului: ");
         String nrInv = input.nextLine();
 
-        // Căutăm echipamentul în listă
+
         for (Echipament echipament : echipamente) {
             if (echipament instanceof Copiator && echipament.getNrInv().equals(nrInv)) {
                 System.out.print("Introduceți noul format de copiere (A3, A4): ");
@@ -181,10 +181,10 @@ public class Main {
                 } catch (IllegalArgumentException e) {
                     System.out.println("Format invalid. Vă rugăm să introduceți A3 sau A4.");
                 }
-                return; // Oprire după găsirea și actualizarea copiatorului
+                return;
             }
         }
-        // Mesaj de eroare dacă copiatorul nu este găsit
+
         System.out.println("Copiatorul cu numărul de inventar " + nrInv + " nu a fost găsit.");
     }
 
